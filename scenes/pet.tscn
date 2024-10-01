@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://cs7m68givnhre"]
+
+[ext_resource type="Texture2D" uid="uid://dk8vohf7k0aec" path="res://assets/conor_standing.png" id="1_2cau6"]
+[ext_resource type="Shader" path="res://shaders/rainbow.gdshader" id="1_dtddr"]
+[ext_resource type="Script" path="res://scripts/Pet.cs" id="2_g5701"]
+[ext_resource type="Texture2D" uid="uid://3hiirdicbbv2" path="res://assets/conor_eating1.png" id="3_7sxev"]
+[ext_resource type="AudioStream" uid="uid://3q0tphw58w5e" path="res://assets/Minecraft Eating - Sound Effect (HD).mp3" id="3_72kdy"]
+[ext_resource type="Texture2D" uid="uid://chkyskduhmn72" path="res://assets/conor_eating2.png" id="4_rgdo2"]
+[ext_resource type="AudioStream" uid="uid://dto7xw2p2chvo" path="res://assets/Mario bros Wii star music.mp3" id="7_sds7y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_81857"]
+shader = ExtResource("1_dtddr")
+shader_parameter/strength = 0.5
+shader_parameter/speed = 1.0
+shader_parameter/angle = 0.0
+shader_parameter/onoff = 2.08165e-12
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q0tpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2cau6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7sxev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rgdo2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ConorStanding" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_81857")
+position = Vector2(600, 325)
+scale = Vector2(1.98333, 1.19482)
+sprite_frames = SubResource("SpriteFrames_q0tpf")
+script = ExtResource("2_g5701")
+
+[node name="EatingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_72kdy")
+
+[node name="StarSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_sds7y")

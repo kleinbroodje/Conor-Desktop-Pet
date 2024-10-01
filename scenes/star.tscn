@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhq00ybwcppmh"]
+
+[ext_resource type="Script" path="res://scripts/Star.cs" id="1_8t1m8"]
+[ext_resource type="Texture2D" uid="uid://6skwmrifw0uo" path="res://assets/star.png" id="2_01tle"]
+
+[node name="StarWindow" type="Window"]
+transparent_bg = true
+size = Vector2i(200, 200)
+borderless = true
+always_on_top = true
+transparent = true
+min_size = Vector2i(200, 200)
+max_size = Vector2i(200, 200)
+script = ExtResource("1_8t1m8")
+
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(100, 100)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_01tle")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dto7xw2p2chvo"
+path="res://.godot/imported/Mario bros Wii star music.mp3-9e0f63a4feed3c0c107b04c6b1b32e7d.mp3str"
+
+[deps]
+
+source_file="res://assets/Mario bros Wii star music.mp3"
+dest_files=["res://.godot/imported/Mario bros Wii star music.mp3-9e0f63a4feed3c0c107b04c6b1b32e7d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cswmki1qntwgf"]
+
+[ext_resource type="PackedScene" uid="uid://cs7m68givnhre" path="res://scenes/pet.tscn" id="1_xaypb"]
+[ext_resource type="Shader" path="res://shaders/rainbow.gdshader" id="2_7cit0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uicjo"]
+shader = ExtResource("2_7cit0")
+shader_parameter/strength = 0.5
+shader_parameter/speed = 1.0
+shader_parameter/angle = 0.0
+shader_parameter/onoff = 1.0
+
+[node name="Main" type="Node"]
+
+[node name="ConorStanding" parent="." instance=ExtResource("1_xaypb")]
+material = SubResource("ShaderMaterial_uicjo")
